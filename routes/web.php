@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::view('/','pages.index')->name('index');
+Route::view('/','pages.index')->name('index')->middleware('auth');
 Route::post('new-account', "ClientAccountCreation@new_account")->name('new_account');
 Auth::routes();
 
