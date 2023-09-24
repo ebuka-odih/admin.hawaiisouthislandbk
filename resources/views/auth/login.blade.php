@@ -48,8 +48,6 @@
               <button type="submit" class="btn btn-info btn-block">Login</button>
           </form>
 
-
-        <div class="mg-t-40 tx-center">Request for an account <a href="{{ route('reg_new_account') }}" class="tx-info">Enroll</a></div>
       </div><!-- login-wrapper -->
     </div><!-- d-flex -->
 
