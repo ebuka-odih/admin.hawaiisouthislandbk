@@ -24,8 +24,8 @@
     <div class="d-flex align-items-center justify-content-center bg-br-primary ht-100v">
 
       <div class="login-wrapper wd-300 wd-xs-400 pd-25 pd-xs-40 bg-white rounded shadow-base">
-          <a href="{{ route('index') }}">
-              <div class="signin-logo tx-center tx-28 tx-bold tx-inverse"><span class="tx-normal">[</span> NationsStar <span class="tx-info"> Bank PLC</span> <span class="tx-normal">]</span></div>
+          <a href="#">
+              <div class="signin-logo tx-center tx-28 tx-bold tx-inverse"><span class="tx-normal">[</span> {{ env('APP_NAME') }} <span class="tx-normal">]</span></div>
           </a>
           <form class="mt-4" action="{{ route('login') }}" method="POST">
               @csrf
