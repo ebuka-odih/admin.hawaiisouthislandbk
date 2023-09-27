@@ -43,6 +43,8 @@ Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'admin', 'as' => 'a
     Route::delete('user/{id}/delete', 'Admin\UserController@delete_user')->name('delete.user');
     Route::get('approve/user/{id}', "Admin\UserController@approveUser")->name('approveUser');
     Route::get('suspend/user/{id}', "Admin\UserController@suspend_user")->name('suspendUser');
+    Route::get('on-hold/user/{id}', "Admin\UserController@onHold")->name('onHold');
+    Route::get('free/user/{id}', "Admin\UserController@onActive")->name('onActive');
     //  End of User Route
 
 
