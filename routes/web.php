@@ -13,8 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
-Route::get('/', 'Admin\AdminController@dashboard')->middleware('auth');
+Route::view('/', 'auth.login')->name('index');
 Route::post('new-account', "ClientAccountCreation@new_account")->name('new_account');
 Auth::routes();
 
