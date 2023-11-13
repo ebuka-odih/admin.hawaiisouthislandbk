@@ -28,7 +28,7 @@ class LoginController extends Controller
             return redirect()->route('admin.dashboard');
         }elseif(Auth::user() && Auth::user()->status == 0 )
         {
-            return redirect()->route('pending');
+            return redirect('/');
         }
         return redirect()->route('user.dashboard');
 
