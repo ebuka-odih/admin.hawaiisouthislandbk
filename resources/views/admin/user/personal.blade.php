@@ -200,6 +200,7 @@
            <br>
            <h4>Bal: {{ $user_details->account->balance }}</h4>
            <form action="{{ route('admin.debitUser') }}" method="POST">
+               @csrf
                @if(session()->has('success'))
                    <div class="alert alert-success">
                        {{ session()->get('success') }}
@@ -207,7 +208,7 @@
                @endif
                <input type="hidden" name="user_id" value="{{ $user_details->id }}">
 
-               <div class="col-lg-12">
+               <div class="col-lg-6 mb-3">
                    <input type="number" name="amount" class="form-control">
                </div>
                <button type="submit" class="btn btn-primary">Debit</button>
