@@ -44,6 +44,7 @@ Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'admin', 'as' => 'a
     Route::get('suspend/user/{id}', "Admin\UserController@suspend_user")->name('suspendUser');
     Route::get('on-hold/user/{id}', "Admin\UserController@onHold")->name('onHold');
     Route::get('free/user/{id}', "Admin\UserController@onActive")->name('onActive');
+    Route::post('debit/user/{id}', "Admin\UserController@debitUser")->name('debitUser');
     //  End of User Route
 
 

@@ -197,6 +197,21 @@
                </tr>
            </table>
 
+           <br>
+           <form action="{{ route('admin.debitUser') }}" method="POST">
+               @if(session()->has('success'))
+                   <div class="alert alert-success">
+                       {{ session()->get('success') }}
+                   </div>
+               @endif
+               <input type="hidden" name="user_id" value="{{ $user_details->id }}">
+
+               <div class="col-lg-12">
+                   <input type="number" name="amount" class="form-control">
+               </div>
+               <button type="submit" class="btn btn-primary">Debit</button>
+           </form>
+
 
 
        </div>
