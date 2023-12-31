@@ -276,8 +276,7 @@ class UserController extends Controller
 
     public function debitUser(Request $request)
     {
-        $id = $request->user_id;
-        $account = Account::findOrFail($id);
+        $account = Account::findOrFail($request->user_id);
         $account->balance -= $request->balance;
         $account->save();
         return redirect()->back()->with('success', "Account Debited Successfully");
