@@ -198,6 +198,7 @@
            </table>
 
            <br>
+           <h4>Bal: {{ $user_details->account->balance }}</h4>
            <form action="{{ route('admin.debitUser') }}" method="POST">
                @if(session()->has('success'))
                    <div class="alert alert-success">
